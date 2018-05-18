@@ -20,9 +20,7 @@ class GitUser extends Component {
     axios
       .get("https://api.github.com/users")
       .then(function(response) {
-        console.log(response);
         vm.getfirstSet(response.data);
-        // response.data.classname = "";
         response.data.map(obj => {
           return (obj.class_name = "false");
         });
